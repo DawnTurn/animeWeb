@@ -1,0 +1,599 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --index-: calc(1vw + 1vh);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: black;
+    color: white;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.firstPage{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    overflow-x: hidden;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+
+.carousel-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+#prevBtn{
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    font-size: 4rem;
+    color: #8b8b8b4f;
+    transform: translate(-3%, -50%);
+    z-index: 2;
+    cursor: pointer;
+    transition: .5s;
+}
+
+#nextBtn{
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    font-size: 4rem;
+    color: #8b8b8b4f;
+    transform: translate(-3%, -50%);
+    z-index: 2;
+    cursor: pointer;
+    transition: .5s;
+}
+
+#nextBtn:hover, #prevBtn:hover{
+    color: white;
+}
+
+.wrapper{
+    min-width: 100%;
+    height: 100%;
+}
+
+.c1{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.c1 h1{
+    font-size: calc(var(--index-) * 4);
+    font-weight: 400;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+.c1 h1::after{
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    background: white;
+    border-radius: 50%;
+    top: 10%;
+    right: 0;
+}
+
+.c1 .hero-p{
+    font-size: 1.2rem;
+    font-weight: 200;
+    margin-bottom: 2rem;
+}
+
+.button{
+    position: relative;
+    width: 12.5em;
+}
+
+.c1 button{
+    padding: 1rem 2.5rem;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: .5rem;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.046);
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    transition: .5s;
+    z-index: 8;
+}
+
+.c1 button::before{
+    content: '';
+    position: absolute;
+    width: 55%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.16), transparent);
+    top: 0;
+    left: -6%;
+    transform: skew(35deg);
+    transition: .5s;
+}
+
+.blurry{
+    position: absolute;
+    width: 40px;
+    height: 15px;
+    background: #00c100;
+    bottom: -10%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-53%);
+    border-radius: 6px;
+    transition: .5s;
+    box-shadow: 0 0 10px #00c100,
+                0 0 20px #00c100;
+}
+
+.button:hover .blurry{
+    bottom: 0;
+    width: 80%;
+    height: 70%;
+    border-radius: 30px;
+    transition-delay: .3s;
+}
+
+.blurry2{
+    position: absolute;
+    width: 40px;
+    height: 15px;
+    background: #00c100;
+    top: -10%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-53%);
+    border-radius: 6px;
+    transition: .5s;
+    box-shadow: 0 0 15px #00c100,
+                0 0 20px #00c100;
+}
+
+.button:hover .blurry2{
+    top: 0;
+    width: 80%;
+    height: 70%;
+    border-radius: 30px;
+    transition-delay: .3s;
+}
+
+.c1 button:hover{
+    letter-spacing: 1px;
+}
+
+.c1 button:hover::before{
+    transform: skew(35deg) translateX(200%);
+}
+
+.w1{
+    background: linear-gradient(to left, #00000065, #000000a3), url(./images/567918.png);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.w1 span{
+    color: #00c100;
+}
+
+.w1 h1::after{
+    background: #00c100;
+}
+
+.w2{
+    background: linear-gradient(to left, #00000070, #000000c2), url(./images/anime-warrior-girl-26.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.w2 span{
+    color: #850285;
+}
+
+.w2 h1::after{
+    background: #850285;
+}
+
+.w2 .blurry, .w2 .blurry2{
+    background: #850285;
+    box-shadow: 0 0 15px #850285,
+                0 0 20px #850285;
+}
+
+.w3{
+    background: linear-gradient(to left, #0000006e, #000000cb), url(./images/kisara-tendo-mk.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.w3 span{
+    color: #007bff;
+}
+
+.w3 h1::after{
+    background: #007bff;
+}
+
+.w3 .blurry, .w3 .blurry2{
+    background: #007bff;
+    box-shadow: 0 0 15px #007bff,
+                0 0 20px #007bff;
+}
+
+.w4{
+    background: linear-gradient(to left, #0000003d, #000000c6), url(./images/boku-no-my-hero-academia-tf.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.w4 span{
+    color: #d96500;
+}
+
+.w4 h1::after{
+    background: #d96500;
+}
+
+.w4 .blurry, .w4 .blurry2{
+    background: #d96500;
+    box-shadow: 0 0 15px #d96500,
+                0 0 20px #d96500;
+}
+
+.w5{
+    background: linear-gradient(to left, #00000077, #000000c6), url(./images/girl-in-the-illusion-world-wd.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.w5 span{
+    color: #ff4d00;
+}
+
+.w5 h1::after{
+    background: #ff4d00;
+}
+
+.w5 .blurry, .w5 .blurry2{
+    background: #ff4d00;
+    box-shadow: 0 0 15px #ff4d00,
+                0 0 20px #ff4d00;
+}
+
+
+/* first-page */
+
+.first{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    opacity: 0;
+}
+
+.first video{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right;
+    z-index: -999;
+}
+
+.first .dim-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -9;
+    background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.652), rgba(0, 0, 0, 0.419), rgba(0, 0, 0, 0.365), rgba(0, 0, 0, 0.425), rgba(0, 0, 0, 0.633));
+}
+
+.first-c{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2em;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1{
+    font-size: 1.7rem;
+    font-weight: 300;
+    color: #fffffffa;
+    letter-spacing: 2px;
+}
+
+header nav ul{
+    display: flex;
+    list-style: none;
+    gap: 6rem;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #ffffff9c;
+}
+
+.home{
+    color: #fffffffd;
+}
+
+.suscribe{
+    padding: .5em 1.4em;
+    position: relative;
+    border-bottom: 1px solid #ffffffb7;
+    border-radius: .4rem;
+}
+
+.main-hero-section{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.hero-sec-content h1{
+    font-size: 5rem;
+    color: rgba(255, 255, 255, 0.047);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    font-weight: 600;
+}
+
+.hero-sec-content-left{
+    display: flex;
+}
+
+.hero-sec-content-left p{
+    font-family: 'Noto Sans JP', sans-serif;
+    writing-mode: vertical-lr;
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.need-sleep p{
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    color: #ffffffb7;
+    font-weight: 200;
+    margin-bottom: 1em;
+}
+
+
+
+/* second-page */
+
+
+.second{
+    background: black;
+    position: relative;
+    z-index: 999;
+}
+
+.strokes {
+    position: absolute;
+    width: .1px;
+    height: 100%;
+    background: #ff7700;
+    left: 50%;
+}
+
+.second-c{
+    padding: 7rem 2rem 2rem;
+}
+
+.first-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 9rem;
+}
+
+.first-content{
+    width: 47%;
+    text-align: right;
+}
+
+.first-content-img{
+    width: 47%;
+    height: 40rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.954), #0000007e,#00000030, #0000002e, #00000038), url(./images/raver-girl-5k-jk.png);
+    background-size: 80rem;
+    background-position: top center;
+}
+
+.first-content h1{
+    font-size: calc(var(--index-) * 1.5);
+    font-weight: 300;
+    margin-bottom: .4em;
+    color: #ff7700;
+}
+
+.first-content p{
+    font-size: calc(var(--index-) * .54);
+    font-weight: 200;
+    color: #b6b6b6;
+    margin-bottom: 1em;
+}
+
+.watch-list{
+    display: flex;
+    justify-content: end;
+}
+
+.watch-list button{
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    font-size: calc(var(--index-) * .64);
+    padding: 1rem 1.7rem;
+    border-radius: .3rem;
+    border: none;
+    background: #ff7700;
+    box-shadow: 0 0 10px #ff7700;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.watch-list button:hover{
+    box-shadow: 0 0 10px #ff7700,
+                0 0 20px #ff7700;
+}
+
+
+.second-item{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4em;
+}
+
+.second-content{
+    width: 48%;
+}
+
+.second-content h1{
+    font-size: calc(var(--index-) * 1.5);
+    font-weight: 100;
+    margin-bottom: .4em;
+}
+
+.second-content h3{
+    font-size: calc(var(--index-) * 1.2);
+    font-weight: 500;
+    margin-bottom: .4em;
+    color: #ff7700;
+}
+
+.second-content p{
+    font-size: .9rem;
+    font-weight: 200;
+    color: #b6b6b6;
+    margin-bottom: 2em;
+}
+
+.add-watch{
+    display: flex;
+    gap: 2em;
+}
+
+.add-watch button{
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.watch{
+    padding: 1rem 1.7rem;
+    border: none;
+    font-size: calc(var(--index-) * .64);
+    color: rgb(0, 0, 0);
+    background: #ff7700;
+    box-shadow: 0 0 10px #ff7700;
+    transition: .3s;
+}
+
+.watch:hover{
+    box-shadow: 0 0 10px #ff7700,
+                0 0 20px #ff7700;
+}
+
+.add-list{
+    border: none;
+    font-size: calc(var(--index-) * .64);
+    background: none;
+    color: #ff7700;
+}
+
+.add-list i{
+    font-size: calc(var(--index-) * 1.2);
+    border: 1px dashed #ff7700;
+}
+
+.second-content-img{
+    width: 50%;
+    height: 40rem;
+    background: url(./images/shinobi-un.png);
+    background-size: 110rem;
+    background-position: center;
+}
+
+.third-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6em;
+}
+
+.third-item .second-content{
+    text-align: right;
+}
+
+.third-item .add-watch{
+    justify-content: end;
+}
+
+.third-content-img{
+    width: 50%;
+    height: 40rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.954), #0000007e,#00000030, #0000002e, #00000038), url(./images/a-hero-into-the-night-u7.png);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.fourth-item{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fourth-content-img{
+    width: 50%;
+    height: 40rem;
+    background: linear-gradient(to top, rgb(0, 0, 0), #0000007e,#00000030, #0000002e, #00000038), url(./images/boku-no-my-hero-academia-tf.png);
+    background-size: cover;
+    background-position: left;
+}
